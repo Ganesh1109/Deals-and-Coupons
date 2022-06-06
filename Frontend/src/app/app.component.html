@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+  <!--NAVBAR-->  
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-DailyDeals" href="#page-top">
+        Today's Deals
+      </a>
+      <button class="navbar-toggler btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNav">
+        <ul class="navbar-nav  ms-auto mb-2 ">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="#" >Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#partner">Partners</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/coupons" >Coupons</a>
+          </li>
+        </ul>
+        <button class="btn btn-block btn-warning google-sign-in  navbar-button" (click)="signInHandler()">
+          <img [src]="'assets/images/google.svg'" alt="google"/>
+          <span> User SignIn</span>
+        </button>
+        <button class="btn btn-warning navbar-button" data-bs-toggle="modal" data-bs-target="#exampleModal">Admin SignIn</button>
+      </div>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>
